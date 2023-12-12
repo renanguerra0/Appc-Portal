@@ -1,0 +1,48 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="pages.css">
+        <script src="https://app.powerbi.com/scripts/reportembed.min.js"></script>
+        <script src="index.js" defer></script>
+        <link rel="shortcut icon" href="Imagens/Logotipo1.png" type="image/x-icon">
+        <title>Portal Bi - Pe. Cicero</title>
+    </head>
+    <body>
+        <!--Botão mostrar/ocultar barra lateral e exibir texto-->
+        <button id="toggleButton" onclick="toggleSidebar()" onmouseover="showMessage()" onmouseout="hideMessage()">
+            <img src="Imagens/Logotipo1.png" alt="Botão" width="27px" height="18px"><div class="mensagem">Exibir/Ocultar</div>
+        </button>
+        
+        <!--Barra lateral-->
+        <div class="sidebar" id="sidebar">
+            
+            <!--Logo da empresa-->
+            <div class="logo">
+                <img src="Imagens/Logotipo.png" alt="Logo da Empresa">
+            </div>
+            
+            <!--Menu com os botões-->
+            <ul class="menu">
+            </ul>
+
+            <div class="logout">
+                <button type="button" onclick="logout()"><img src="Imagens/seta-logout.png" alt="logout" width="18px">Lougout</button>
+            </div>
+
+        </div>
+
+        <!--Onde o conteúdo será mostrado-->
+        <div id="content">
+            <p>&#128072 Escolha um dashboard no menu ao lado.</p>
+        </div>
+
+    </body>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+    <script src="../firebase-init.js"></script>
+    <script src="../auth-guard.js"></script>
+</html>

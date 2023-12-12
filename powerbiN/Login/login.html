@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" href="ImagensL/Logotipo1.png" type="image/x-icon">
+    <script src="login.js" defer></script>
+    <title>Portal Bi - Login</title>
+</head>
+<body>
+    <div class="main-login">
+
+        <div class="left-login">
+            <h1>Realize o login <br>e tenha acesso aos dashboards.</h1>
+            <img src="ImagensL/dashboard-animate.svg" class="left-login-image" alt="dashboard">
+        </div>
+
+        <div class="right-login">
+            <div class="card-login">
+
+                <img src="ImagensL/Logotipo2Natal.png" alt="Logotipo" id="logo-login">
+
+                <form class="textfield" id="forms">
+
+                    <div class="textfield">
+                        <label for="email"> <img src="ImagensL/usuario.png" alt="login" width="15px"> Usuário</label>
+                        <img src="" alt="">
+                        <input type="email" name="email" id="email" placeholder="Email@exemplo.com.br" onchange="onChangeEmail()">
+                        <div class="erro" id="email-obrigatorio">*Email obrigatório</div>
+                        <div class="erro" id="email-invalido">*Email inválido</div>
+                    </div>
+
+                    <div class="textfield">
+                        <label for="senha"> <img src="ImagensL/cadeado.png" alt="cadeado" width="15px"> Senha</label>
+                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" onchange="onChangePassword()">
+                        <div class="erro" id="senha-obrigatoria">*Senha obrigatória</div>
+                    </div>
+
+                    <button class="btn-login" id="login" type="button" disabled="true" onclick="acessar()">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-init.js"></script>
+</html>
